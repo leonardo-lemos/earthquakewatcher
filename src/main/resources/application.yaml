@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: earthquakewatcher
+  mongodb:
+    uri: ${MONGODB_URI:mongodb://localhost:27017/earthquakewatcher}
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+
+usgs:
+  api:
+    base-url: https://earthquake.usgs.gov
+
+ntfy:
+  api:
+    base-url: https://ntfy.sh
+  topic: ${NTFY_TOPIC:earthquakewatcher-d41d8cd98f00b204e9800998ecf8427e}
